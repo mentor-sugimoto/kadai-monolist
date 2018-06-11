@@ -20,6 +20,11 @@
                                 @endif
                             </div>
                         </div>
+                        @if (isset($item->count))
+                            <div class="panel-footer">
+                                <p class="text-center">{{ $loop->iteration }}位: {{ $item->count}} Wants</p>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
