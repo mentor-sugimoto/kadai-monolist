@@ -22,7 +22,7 @@
                         </div>
                         @if (isset($item->count))
                             <div class="panel-footer">
-                                <p class="text-center">{{ $loop->iteration }}位: {{ $item->count}} Wants</p>
+                                <p class="text-center">{{ $loop->iteration }}位: {{ $item->count }} {{ title_case(str_plural($type)) }}</p>
                             </div>
                         @endif
                     </div>
