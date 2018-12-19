@@ -22,7 +22,11 @@
                         </div>
                         @if (isset($item->count))
                             <div class="panel-footer">
-                                <p class="text-center">{{ $loop->iteration }}位: {{ $item->count }} {{ title_case(str_plural($type)) }}</p>
+                                <p class="text-center">
+                                    {{ $loop->iteration }}位:
+                                    {{ $item->count }}
+                                    {{ Request::is('ranking/want') ? 'Wants' : 'Haves' }}
+                                </p>
                             </div>
                         @endif
                     </div>
